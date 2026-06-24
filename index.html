@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LAB 365 — Suplementos alimenticios naturales de alta calidad. Entrega a domicilio en Tijuana con pago al recibir. Moringa, Ashwagandha, Tribulus, Grenetina y más.">
+    <meta name="theme-color" content="#050505">
+    <title>LAB 365 | Suplementos Naturales · Tijuana</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Design System -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Global noise texture -->
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <!-- =====================================================
+         ENTERPRISE LOADER
+         ===================================================== -->
+    <div id="loader-wrapper" role="status" aria-label="Cargando LAB 365">
+        <div class="loader-ring-wrap">
+            <div class="loader-ring-outer"></div>
+            <div class="loader-ring-inner"></div>
+            <div class="loader-logo-disc">
+                <img src="img/logo.png" alt="LAB 365">
+            </div>
+        </div>
+
+        <div class="loader-brand">LAB <span>365</span></div>
+        <div class="loader-tagline">Naturaleza que te hace bien</div>
+
+        <div class="loader-progress-track">
+            <div class="loader-progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         WHATSAPP FLOAT BUTTON
+         ===================================================== -->
+    <a href="https://wa.me/526645865756?text=%F0%9F%8C%BF%20Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20conocer%20sus%20productos.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+       target="_blank" rel="noopener noreferrer"
+       class="wa-float" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">¡Escríbenos ahora!</span>
+    </a>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+    <header id="navbar" role="banner">
+        <div class="nav-bg-layer" aria-hidden="true"></div>
+        <div class="nav-inner">
+
+            <!-- Logo -->
+            <a href="#" class="nav-logo" aria-label="LAB 365 — Inicio">
+                <img src="img/logo.png" alt="LAB 365">
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="#productos">Productos</a>
+                <a href="#calidad">Nosotros</a>
+                <a href="#contacto" class="nav-cta">Hacer Pedido</a>
+            </nav>
+
+            <!-- Mobile hamburger -->
+            <button class="nav-mobile-btn" id="mobile-btn" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu" aria-label="Menú móvil">
+        <a href="#productos">Productos</a>
+        <a href="#calidad">Nosotros</a>
+        <a href="#contacto" class="mobile-cta-link">
+            <i class="fab fa-whatsapp"></i> Hacer Pedido
+        </a>
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main id="main-content">
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+        <section id="hero" aria-label="Sección principal">
+
+            <!-- Parallax background image (fixed) -->
+            <div class="hero-bg" aria-hidden="true"></div>
+
+            <!-- Interactive particles canvas -->
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+            <!-- Gradient overlay for readability -->
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <!-- Gold scan sweep -->
+            <div class="hero-scan" aria-hidden="true"></div>
+
+            <!-- Ambient orbs -->
+            <div class="orb-1 hero-orb" aria-hidden="true"></div>
+            <div class="orb-2 hero-orb" aria-hidden="true"></div>
+            <div class="orb-3 hero-orb" aria-hidden="true"></div>
+
+            <!-- Floating ingredient badges (desktop sides only) -->
+            <div class="hero-floaters" aria-hidden="true">
+                <div class="floater floater-1"><i class="fas fa-leaf"></i> Moringa</div>
+                <div class="floater floater-2"><i class="fas fa-seedling"></i> Ashwagandha</div>
+                <div class="floater floater-3"><i class="fas fa-bolt"></i> Tribulus</div>
+                <div class="floater floater-4"><i class="fas fa-droplet"></i> Grenetina</div>
+                <div class="floater floater-5"><i class="fas fa-star"></i> Maca Negra</div>
+            </div>
+
+            <div class="hero-content">
+
+                <!-- Location badge -->
+                <div class="hero-badge ha ha-down ha-d1">
+                    <div class="hero-badge-dot" aria-hidden="true"></div>
+                    <span class="hero-badge-text">Tijuana, B.C. &nbsp;·&nbsp; Pago al Recibir</span>
+                </div>
+
+                <!-- Main headline — second line has typewriter on the gold word -->
+                <h1>
+                    <span class="hero-title-line ha ha-left ha-d2">NATURALEZA</span>
+                    <span class="hero-title-line ha ha-right ha-d3">
+                        QUE TE <span class="text-gold" id="h1-tw">HACE BIEN.</span><span class="tw-cursor-h1" aria-hidden="true"></span>
+                    </span>
+                </h1>
+
+                <!-- Static subtitle -->
+                <p class="hero-tagline ha ha-up ha-d4">
+                    Suplementos naturales de alta calidad, los 365 días del año.
+                </p>
+
+                <!-- CTAs -->
+                <div class="hero-ctas ha ha-up ha-d5">
+                    <a href="#productos" class="btn-primary">
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
+                        Ver Productos
+                    </a>
+                    <a href="#contacto" class="btn-secondary">
+                        Hacer Pedido
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Trust stats — data-to triggers counter animation -->
+                <div class="hero-stats ha ha-up ha-d6">
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-to="365">0</span>
+                        <span class="hero-stat-label">Días al año</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-to="100" data-suffix="%">0%</span>
+                        <span class="hero-stat-label">Natural</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-to="8" data-prefix="+">+0</span>
+                        <span class="hero-stat-label">Productos</span>
+                    </div>
+                </div>
+
+            </div><!-- /hero-content -->
+
+            <!-- Subtle scroll hint -->
+            <div class="hero-scroll" aria-hidden="true">
+                <span class="hero-scroll-text">Explorar</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TICKER / MARQUEE
+             ================================================= -->
+        <div class="ticker-section" aria-hidden="true">
+            <div class="ticker-track">
+                <!-- First set -->
+                <div class="ticker-item">
+                    <span>Moringa</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Ashwagandha</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Tribulus Terrestris</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Grenetina</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Ajo Negro</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Aguaje</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Fenogreco</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Maca Negra</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Magnesio</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Omega 3-6-9</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Shilajit</span>
+                    <span class="ticker-sep">✦</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item" aria-hidden="true">
+                    <span>Moringa</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Ashwagandha</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Tribulus Terrestris</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Grenetina</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Ajo Negro</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Aguaje</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Fenogreco</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Maca Negra</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Magnesio</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Omega 3-6-9</span>
+                    <span class="ticker-sep">✦</span>
+                    <span>Shilajit</span>
+                    <span class="ticker-sep">✦</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =================================================
+             PRODUCTOS
+             ================================================= -->
+        <section id="productos" class="section-productos">
+            <div class="container">
+
+                <div class="products-header reveal">
+                    <span class="section-tag">Nuestra Línea</span>
+                    <h2 class="section-title">CATÁLOGO <span class="text-gold">LAB 365</span></h2>
+                    <p class="section-subtitle" style="margin: 14px auto 0;">
+                        Ingredientes naturales cuidadosamente seleccionados para apoyar tu energía,
+                        bienestar y calidad de vida. Entrega a domicilio en Tijuana — paga al recibir.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+
+                    <!-- 1. Moringa -->
+                    <article class="product-card reveal reveal-d1">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.49 PM.jpeg"
+                                 alt="Cápsulas de Aceite de Moringa CBA 650mg"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-gold">Más Vendido</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Energía &amp; Inmunidad</span>
+                            <h3 class="product-name">Cápsulas de Moringa</h3>
+                            <p class="product-desc">650 mg por cápsula. Energía natural, refuerza inmunidad, efecto antiinflamatorio y apoya la salud cardiovascular.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Energía Natural</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Inmunidad</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Antiinflamatorio</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$349 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">2 frascos × $499</div>
+                                </div>
+                                <button class="product-btn" data-product="Cápsulas de Moringa CBA 650mg">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. Tribulus Stack -->
+                    <article class="product-card reveal reveal-d2">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.50 PM (1).jpeg"
+                                 alt="Tribulus Terrestris + Shilajit + Maca Negra — Vitalidad Masculina"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-dark">Premium</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Vitalidad Masculina</span>
+                            <h3 class="product-name">Tribulus Terrestris Stack</h3>
+                            <p class="product-desc">Con Shilajit, Maca Negra, Tongkat Ali y Horny Goat. Fuerza, resistencia, enfoque mental y vigor integral. 60 cáps de 500 mg.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Fuerza</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Vitalidad</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Adaptógeno</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$499 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">Envío gratis en Tijuana</div>
+                                </div>
+                                <button class="product-btn" data-product="Tribulus Terrestris Stack (Shilajit + Maca + Tongkat Ali)">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. Ashwagandha + Magnesio -->
+                    <article class="product-card reveal reveal-d3">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.51 PM (1).jpeg"
+                                 alt="Ashwagandha + Citrato de Magnesio y Potasio — Estrés y Sueño"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-green">Bienestar</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Estrés &amp; Sueño</span>
+                            <h3 class="product-name">Ashwagandha + Mg &amp; K</h3>
+                            <p class="product-desc">Reduce el estrés y ansiedad, mejora la calidad del sueño, relaja los músculos y contribuye al metabolismo energético. 60 cáps 500 mg.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Anti-estrés</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Sueño</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Relajación</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$349 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">2 frascos × $499</div>
+                                </div>
+                                <button class="product-btn" data-product="Ashwagandha + Citrato de Magnesio y Potasio">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. Grenetina Hidrolizada -->
+                    <article class="product-card reveal reveal-d4">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.50 PM (2).jpeg"
+                                 alt="Grenetina Hidrolizada con Glucosamina GlucoGren 500g"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-dark">Articulaciones</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Movilidad &amp; Piel</span>
+                            <h3 class="product-name">Grenetina Hidrolizada</h3>
+                            <p class="product-desc">Con Glucosamina y Omega 3-6-9. Fortalece cartílagos, reduce dolor y rigidez, mejora movilidad y cuida la piel. 500 g polvo.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Articulaciones</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Piel</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Flexibilidad</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$349 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">2 frascos × $499</div>
+                                </div>
+                                <button class="product-btn" data-product="Grenetina Hidrolizada con Glucosamina 500g">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5. Ajo Negro + Omega -->
+                    <article class="product-card reveal reveal-d1">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.48 PM.jpeg"
+                                 alt="Combo Bienestar — Ajo Negro + Omega 3-6-9"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-gold">Combo</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Corazón &amp; Músculos</span>
+                            <h3 class="product-name">Ajo Negro + Omega 3-6-9</h3>
+                            <p class="product-desc">Mejora la salud cardiovascular, ayuda a eliminar dolores musculares y fortalece el sistema inmunológico. 90 comprimidos + 500 g.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Cardiovascular</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Dolores</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Inmunidad</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$349 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">Combo Bienestar</div>
+                                </div>
+                                <button class="product-btn" data-product="Combo Bienestar — Ajo Negro + Omega 3-6-9">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. Aguaje + Maca Roja -->
+                    <article class="product-card reveal reveal-d2">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.51 PM (2).jpeg"
+                                 alt="Aguaje y Maca Roja — Equilibrio Hormonal Femenino"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-green">Para Ella</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Bienestar Femenino</span>
+                            <h3 class="product-name">Aguaje + Maca Roja</h3>
+                            <p class="product-desc">Equilibrio hormonal y curvas naturales. Rico en fitoestrogenos y nutrientes esenciales. Incluye gel de Aguaje de regalo. 90 cáps.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Hormonas</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Energía</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>+ Gel gratis</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$299 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">Incluye gel de regalo</div>
+                                </div>
+                                <button class="product-btn" data-product="Aguaje y Maca Roja (+ Gel de Aguaje de regalo)">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 7. Fenogreco -->
+                    <article class="product-card reveal reveal-d3">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.51 PM (3).jpeg"
+                                 alt="Cápsulas de Fenogreco + Gel Fenogreco gratis"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-dark">Oferta</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Salud Natural</span>
+                            <h3 class="product-name">Fenogreco + Gel</h3>
+                            <p class="product-desc">Cápsulas de Fenogreco 500 mg con fórmula tonificante. Incluye gel de Fenogreco con Colágeno, Aloe, Elastina y Vitamina E de regalo.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Tonificante</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Colágeno</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>+ Gel gratis</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$299 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">Tiempo limitado</div>
+                                </div>
+                                <button class="product-btn" data-product="Fenogreco 90 cápsulas + Gel Fenogreco gratis">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 8. Test Max Coffee -->
+                    <article class="product-card reveal reveal-d4">
+                        <div class="product-img-wrap">
+                            <img src="img/WhatsApp Image 2026-06-24 at 1.06.50 PM.jpeg"
+                                 alt="Test Max Coffee Blend — Café con extractos herbales"
+                                 loading="lazy">
+                            <div class="product-badge-wrap">
+                                <span class="product-badge badge-gold">Exclusivo</span>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Energía &amp; Performance</span>
+                            <h3 class="product-name">Test Max Coffee Blend</h3>
+                            <p class="product-desc">Café 100% Mexicano enriquecido con Tribulus, Tongkat Ali, Maca Negra, Shilajit y Hierba de Cabra. 400 g polvo soluble.</p>
+                            <div class="product-benefits">
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Café Mexicano</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Herbales</span>
+                                <span class="benefit-chip"><i class="fas fa-check"></i>Performance</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-wrap">
+                                    <div class="product-price">$449 <span style="font-size:13px;font-weight:500;color:#9CA3AF;">MXN</span></div>
+                                    <div class="product-price-note">400 g / Café herbal</div>
+                                </div>
+                                <button class="product-btn" data-product="Test Max Coffee Blend 400g">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /products-grid -->
+
+                <!-- CTA catálogo completo -->
+                <div class="text-center mt-16 reveal">
+                    <a href="https://wa.me/526645865756?text=%F0%9F%8C%BF%20Hola%2C%20me%20gustar%C3%ADa%20conocer%20el%20cat%C3%A1logo%20completo%20de%20LAB%20365.%20%C2%BFPodr%C3%ADan%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                       target="_blank" rel="noopener noreferrer"
+                       class="catalog-cta">
+                        <i class="fab fa-whatsapp"></i>
+                        Conoce el catálogo completo
+                        <i class="fas fa-arrow-right catalog-cta-arrow"></i>
+                    </a>
+                    <p class="catalog-cta-note">Tenemos más productos disponibles · Te respondemos de inmediato</p>
+                </div>
+
+            </div><!-- /container -->
+        </section>
+
+
+        <!-- =================================================
+             CALIDAD / NOSOTROS
+             ================================================= -->
+        <section id="calidad" class="section-calidad">
+            <div class="container">
+                <div class="calidad-grid">
+
+                    <!-- Visual side -->
+                    <div class="calidad-visual reveal">
+                        <div class="calidad-main-card">
+                            <i class="calidad-big-icon fas fa-leaf" aria-hidden="true"></i>
+                            <div class="calidad-big-number">365</div>
+                            <div class="calidad-big-label">Días de Bienestar</div>
+                            <p class="calidad-big-desc">
+                                Comprometidos con tu salud todos y cada uno de los días del año,
+                                con productos que realmente funcionan.
+                            </p>
+                            <div class="calidad-pill">🌿 Naturaleza que te hace bien</div>
+                        </div>
+                    </div>
+
+                    <!-- Info side -->
+                    <div class="calidad-info">
+                        <span class="section-tag reveal">Por qué LAB 365</span>
+                        <h2 class="section-title reveal reveal-d1">
+                            LO QUE IMPORTA<br>
+                            <span class="text-gold">ES LO DE ADENTRO.</span>
+                        </h2>
+                        <p class="section-subtitle reveal reveal-d2" style="max-width: 100%;">
+                            Seleccionamos ingredientes naturales de alta biodisponibilidad para que
+                            tu cuerpo aproveche al máximo cada nutriente. Sin rellenos, sin engaños.
+                        </p>
+
+                        <div class="calidad-features">
+
+                            <div class="calidad-feature reveal reveal-d2">
+                                <div class="feature-icon-wrap">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Ingredientes 100% Naturales</h4>
+                                    <p>Fuentes vegetales, minerales y extractos herbales cuidadosamente seleccionados por su pureza y eficacia.</p>
+                                </div>
+                            </div>
+
+                            <div class="calidad-feature reveal reveal-d3">
+                                <div class="feature-icon-wrap">
+                                    <i class="fas fa-shield-halved"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Transparencia Total</h4>
+                                    <p>Etiquetas claras con información nutricional completa. Sabes exactamente qué contiene cada frasco.</p>
+                                </div>
+                            </div>
+
+                            <div class="calidad-feature reveal reveal-d4">
+                                <div class="feature-icon-wrap">
+                                    <i class="fas fa-motorcycle"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Entrega a Domicilio en Tijuana</h4>
+                                    <p>Recibe tus suplementos en la puerta de tu casa. Pago al recibir, sin riesgos y sin salir de casa.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             CONTACTO / PEDIDO
+             ================================================= -->
+        <section id="contacto" class="section-contacto">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div class="contact-grid">
+
+                        <!-- Info -->
+                        <div class="contact-info">
+                            <h2 class="contact-headline">
+                                HAZ TU PEDIDO<br>
+                                <span>HOY MISMO</span>
+                            </h2>
+                            <p class="contact-desc">
+                                Selecciona el producto que necesitas y envíanos un mensaje por WhatsApp.
+                                Coordinamos la entrega a tu domicilio en Tijuana y pagas al recibir.
+                            </p>
+
+                            <div class="contact-benefits">
+                                <div class="contact-benefit">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Pago al recibir — sin riesgos</span>
+                                </div>
+                                <div class="contact-benefit">
+                                    <i class="fas fa-motorcycle"></i>
+                                    <span>Entrega a domicilio en Tijuana</span>
+                                </div>
+                                <div class="contact-benefit">
+                                    <i class="fas fa-box-open"></i>
+                                    <span>Venta por pieza y mayoreo</span>
+                                </div>
+                                <div class="contact-benefit">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>Atención directa por WhatsApp</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form -->
+                        <div class="contact-form-side">
+                            <form id="whatsapp-form" novalidate>
+
+                                <div class="form-group">
+                                    <label for="field-name" class="form-label">Tu Nombre</label>
+                                    <input
+                                        type="text"
+                                        id="field-name"
+                                        class="form-control"
+                                        placeholder="Ej. María G."
+                                        required
+                                        autocomplete="given-name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="field-product" class="form-label">Producto de Interés</label>
+                                    <select id="field-product" class="form-control">
+                                        <option value="Cápsulas de Moringa CBA 650mg">Moringa — $349</option>
+                                        <option value="Tribulus Terrestris Stack">Tribulus Stack (Vitalidad) — $499</option>
+                                        <option value="Ashwagandha + Magnesio y Potasio">Ashwagandha + Mg &amp; K — $349</option>
+                                        <option value="Grenetina Hidrolizada con Glucosamina 500g">Grenetina Hidrolizada — $349</option>
+                                        <option value="Combo Bienestar — Ajo Negro + Omega 3-6-9">Ajo Negro + Omega 3-6-9 — $349</option>
+                                        <option value="Aguaje y Maca Roja + Gel">Aguaje + Maca Roja — $299</option>
+                                        <option value="Fenogreco + Gel gratis">Fenogreco + Gel — $299</option>
+                                        <option value="Test Max Coffee Blend 400g">Test Max Coffee Blend — $449</option>
+                                        <option value="Quiero ver el catálogo completo">Ver catálogo completo</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="field-details" class="form-label">Detalles / Preguntas</label>
+                                    <textarea
+                                        id="field-details"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="¿Tienes alguna duda o comentario?"></textarea>
+                                </div>
+
+                                <button type="submit" class="form-submit">
+                                    <span>Pedir por WhatsApp</span>
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- /main-content -->
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+
+                <!-- Brand column -->
+                <div>
+                    <div class="footer-logo-wrap">
+                        <img src="img/logo.png" alt="LAB 365">
+                    </div>
+                    <p class="footer-brand-desc">
+                        Suplementos alimenticios naturales de alta calidad. Comprometidos con tu
+                        bienestar los 365 días del año. Tijuana, Baja California.
+                    </p>
+                </div>
+
+                <!-- Products column -->
+                <div class="footer-col">
+                    <h4>Productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#productos">Moringa</a></li>
+                        <li><a href="#productos">Ashwagandha + Mg</a></li>
+                        <li><a href="#productos">Tribulus Stack</a></li>
+                        <li><a href="#productos">Grenetina</a></li>
+                        <li><a href="#productos">Aguaje + Maca</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service column -->
+                <div class="footer-col">
+                    <h4>Atención</h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://wa.me/526645865756" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                        <li><a href="#contacto">Hacer Pedido</a></li>
+                        <li><a href="#calidad">Nosotros</a></li>
+                        <li>
+                            <a href="tel:+526645865756">
+                                <i class="fas fa-phone"></i> (664) 586-5756
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; 2026 LAB 365 · Tijuana, Baja California · Todos los derechos reservados.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Instagram LAB 365">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook LAB 365">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/526645865756" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp LAB 365">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
